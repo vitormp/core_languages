@@ -26,7 +26,14 @@ if super_class_of_object == nil
 	puts "The super class of object is nil"
 end
 
+# string in ruby is mutable
+a_string = "some text"
+puts a_string
+puts "Object id from previous string is " << a_string.object_id.to_s
+a_string << " added some more text"
+puts "After changing the previous string with << operator. Object id from previous string is " << a_string.object_id.to_s
 
-
-
+# but if we use the + operator. It will be created a new string
+a_string + " another text"
+puts "Using the + operator. Object id from previous string is " << a_string.object_id.to_s
 
